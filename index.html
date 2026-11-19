@@ -8,77 +8,73 @@
 </head>
 <body>
 
+    <div class="topbar">
+        <a href="index.html" class="brand">⚡ HTML CHRONICLES</a>
+        <nav class="top-nav" aria-label="Главное меню">
+            <a href="index.html" class="active">Главная</a>
+            <a href="dipper.html">Диппер</a>
+            <a href="luffy.html">Луффи</a>
+            <a href="zoro.html">Зоро</a>
+            <a href="quiz.html">Мини-тест</a>
+        </nav>
+    </div>
+
     <header class="hero">
         <p class="badge">АКАДЕМИЯ ВЕБ-РАЗРАБОТКИ</p>
         <h1>HTML ДЛЯ НАЧИНАЮЩИХ</h1>
         <p class="subtitle">
-            Построй скелет своего первого сайта и разбуди силу тегов. Выбери проводника, чтобы перейти к нужной главе!
+            Изучи базовые теги вместе с персонажами и проверь свои знания в мини-тесте из 5 вопросов.
         </p>
 
-        <!-- 3 гиперссылки с персонажами (ведут к разделам страницы или внешним источникам) -->
         <nav class="guides" aria-label="Проводники по обучению">
-            <a href="#basics" class="guide-link dipper">
+            <a href="dipper.html" class="guide-link dipper">
                 <span class="avatar">📘</span>
                 <span class="guide-info">
                     <strong>Диппер Пайнс</strong>
-                    <small>Дневник №3: Базовые теги</small>
+                    <small>Дневник №3: Теги и текст</small>
                 </span>
             </a>
 
-            <a href="#structure" class="guide-link luffy">
+            <a href="luffy.html" class="guide-link luffy">
                 <span class="avatar">🏴‍☠️</span>
                 <span class="guide-info">
                     <strong>Чиби Луффи</strong>
-                    <small>Курс на Гранд Лайн: Структура</small>
+                    <small>Каркас HTML-страницы</small>
                 </span>
             </a>
 
-            <a href="https://developer.mozilla.org/ru/docs/Web/HTML" target="_blank" rel="noopener noreferrer" class="guide-link zoro">
+            <a href="zoro.html" class="guide-link zoro">
                 <span class="avatar">⚔️</span>
                 <span class="guide-info">
                     <strong>Чиби Зоро</strong>
-                    <small>Путь меча: Справочник MDN ↗</small>
+                    <small>Ссылки и списки</small>
+                </span>
+            </a>
+
+            <a href="quiz.html" class="guide-link quiz-card">
+                <span class="avatar">📝</span>
+                <span class="guide-info">
+                    <strong>Мини-тест</strong>
+                    <small>5 вопросов для проверки</small>
                 </span>
             </a>
         </nav>
     </header>
 
     <main class="container">
-        <section id="basics" class="card">
-            <h2>1. Базовые теги — артефакты из Дневника №3</h2>
+        <section class="card">
+            <h2>Как устроен этот проект</h2>
             <p>
-                HTML состоит из <strong>тегов</strong> — подсказок для браузера. Большинство тегов парные: открывающий
-                <code>&lt;p&gt;</code> и закрывающий <code>&lt;/p&gt;</code> со слешем.
+                В корневой папке лежат HTML-файлы (<code>index.html</code>, <code>dipper.html</code>,
+                <code>luffy.html</code>, <code>zoro.html</code>, <code>quiz.html</code>), а в отдельной папке
+                <code>css</code> — общий файл оформления <code>style.css</code>.
             </p>
-            <ul class="tag-list">
-                <li><code>&lt;h1&gt;...&lt;/h1&gt;</code> — главный заголовок эпичной страницы.</li>
-                <li><code>&lt;p&gt;...&lt;/p&gt;</code> — обычный абзац текста.</li>
-                <li><code>&lt;a href="..."&gt;...&lt;/a&gt;</code> — гиперссылка (как те карточки персонажей выше!).</li>
-            </ul>
-        </section>
-
-        <section id="structure" class="card">
-            <h2>2. Каркас страницы — твой корабль перед отплытием</h2>
-            <p>
-                Прежде чем покорять сеть, собери правильный каркас документа. Без него браузер не поймет,
-                где начало и конец страницы.
-            </p>
-            <div class="code-box">
-                <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="ru"&gt;
-&lt;head&gt;
-    &lt;title&gt;Мой сайт&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;Привет, мир!&lt;/h1&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-            </div>
+            <a href="quiz.html" class="btn">Пройти мини-тест из 5 вопросов →</a>
         </section>
     </main>
 
     <footer class="footer">
-        <p>Сделано для защиты проекта по HTML &amp; CSS • 2026</p>
+        <p>Учебный проект по HTML &amp; CSS • 2026</p>
     </footer>
 
 </body>

@@ -12,9 +12,59 @@ body {
     min-height: 100vh;
 }
 
+/* Верхняя панель с навигацией справа */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 16px 32px;
+    background: rgba(9, 11, 22, 0.85);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.brand {
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #38bdf8;
+    text-decoration: none;
+    font-size: 1.05rem;
+}
+
+.top-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-left: auto;
+}
+
+.top-nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.92rem;
+    padding: 7px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    transition: 0.2s ease;
+}
+
+.top-nav a:hover,
+.top-nav a.active {
+    color: #ffffff;
+    border-color: #c084fc;
+    background: rgba(192, 132, 252, 0.2);
+}
+
 .hero {
     text-align: center;
-    padding: 60px 20px 45px;
+    padding: 55px 20px 45px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -32,7 +82,7 @@ body {
 }
 
 .hero h1 {
-    font-size: clamp(2rem, 5vw, 3.4rem);
+    font-size: clamp(1.9rem, 5vw, 3.2rem);
     letter-spacing: 2px;
     text-transform: uppercase;
     background: linear-gradient(90deg, #38bdf8, #c084fc, #f472b6);
@@ -43,7 +93,7 @@ body {
 
 .subtitle {
     max-width: 640px;
-    margin: 0 auto 36px;
+    margin: 0 auto 32px;
     color: #cbd5e1;
     font-size: 1.05rem;
 }
@@ -68,7 +118,7 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.14);
     border-radius: 14px;
     padding: 14px 20px;
-    min-width: 260px;
+    min-width: 240px;
     text-align: left;
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
@@ -92,10 +142,15 @@ body {
     box-shadow: 0 10px 25px rgba(74, 222, 128, 0.28);
 }
 
+.guide-link.quiz-card:hover {
+    border-color: #facc15;
+    box-shadow: 0 10px 25px rgba(250, 204, 21, 0.25);
+}
+
 .avatar {
-    font-size: 2rem;
-    width: 52px;
-    height: 52px;
+    font-size: 1.9rem;
+    width: 50px;
+    height: 50px;
     display: grid;
     place-items: center;
     background: rgba(255, 255, 255, 0.06);
@@ -137,21 +192,12 @@ body {
 .card h2 {
     color: #e2e8f0;
     margin-bottom: 12px;
-    font-size: 1.4rem;
+    font-size: 1.35rem;
 }
 
 .card p {
     color: #cbd5e1;
     margin-bottom: 14px;
-}
-
-.tag-list {
-    padding-left: 22px;
-    color: #e2e8f0;
-}
-
-.tag-list li {
-    margin-bottom: 8px;
 }
 
 code {
@@ -162,19 +208,62 @@ code {
     font-family: Consolas, monospace;
 }
 
-.code-box {
-    background: #060811;
-    border: 1px solid rgba(148, 163, 184, 0.2);
-    border-radius: 12px;
-    padding: 16px;
-    overflow-x: auto;
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 11px 22px;
+    background: linear-gradient(90deg, #38bdf8, #a855f7);
+    color: #ffffff;
+    font-weight: 600;
+    border: none;
+    text-decoration: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.98rem;
+    transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.code-box code {
-    background: none;
-    padding: 0;
-    color: #7dd3fc;
-    font-size: 0.92rem;
+.btn:hover {
+    opacity: 0.92;
+    transform: translateY(-2px);
+}
+
+/* Стили мини-теста */
+.quiz-question {
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.quiz-question:last-of-type {
+    border-bottom: none;
+}
+
+.quiz-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    cursor: pointer;
+}
+
+.quiz-option:hover {
+    border-color: rgba(56, 189, 248, 0.5);
+}
+
+.quiz-result {
+    margin-top: 20px;
+    padding: 18px;
+    border-radius: 12px;
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.4);
+    color: #f8fafc;
+    font-weight: 600;
+    display: none;
 }
 
 .footer {

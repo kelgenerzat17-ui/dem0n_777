@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чиби Зоро — Гиперссылки и списки</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="topbar">
+        <a href="index.html" class="brand">⚡ HTML CHRONICLES</a>
+        <nav class="top-nav" aria-label="Главное меню">
+            <a href="index.html">Главная</a>
+            <a href="dipper.html">Диппер</a>
+            <a href="luffy.html">Луффи</a>
+            <a href="zoro.html" class="active">Зоро</a>
+            <a href="quiz.html">Мини-тест</a>
+        </nav>
+    </div>
+
+    <header class="hero">
+        <p class="badge">ПУТЬ МЕЧА • ГЛАВА 3</p>
+        <h1>ЧИБИ ЗОРО: ССЫЛКИ И СПИСКИ</h1>
+        <p class="subtitle">
+            Чтобы не заблудиться между страницами сайта, нужны точные гиперссылки и структурированные списки.
+        </p>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Как создаются гиперссылки</h2>
+            <p>
+                За переходы отвечает тег <code>&lt;a&gt;</code> с обязательным атрибутом <code>href</code>, в котором
+                указывается адрес назначения:
+            </p>
+            <p>
+                • Внутренняя ссылка на другую страницу твоего сайта: <code>&lt;a href="quiz.html"&gt;Пройти тест&lt;/a&gt;</code>.<br>
+                • Внешняя ссылка на другой сайт в новой вкладке: <code>&lt;a href="https://..." target="_blank"&gt;Документация&lt;/a&gt;</code>.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Списки в HTML</h2>
+            <p>
+                Для перечислений используют два вида списков, а каждый пункт внутри оборачивают в <code>&lt;li&gt;</code>:
+            </p>
+            <p>
+                • <code>&lt;ul&gt;</code> — маркированный список (с точками).<br>
+                • <code>&lt;ol&gt;</code> — нумерованный список (1, 2, 3...).
+            </p>
+            <a href="quiz.html" class="btn">Перейти к мини-тесту из 5 вопросов →</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Хроники HTML • Глава 3: Чиби Зоро • 2026</p>
+    </footer>
+
+</body>
+</html>

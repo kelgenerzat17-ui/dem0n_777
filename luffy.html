@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чиби Луффи — Каркас HTML-документа</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="topbar">
+        <a href="index.html" class="brand">⚡ HTML CHRONICLES</a>
+        <nav class="top-nav" aria-label="Главное меню">
+            <a href="index.html">Главная</a>
+            <a href="dipper.html">Диппер</a>
+            <a href="luffy.html" class="active">Луффи</a>
+            <a href="zoro.html">Зоро</a>
+            <a href="quiz.html">Мини-тест</a>
+        </nav>
+    </div>
+
+    <header class="hero">
+        <p class="badge">КУРС НА ГРАНД ЛАЙН • ГЛАВА 2</p>
+        <h1>ЧИБИ ЛУФФИ: КАРКАС СТРАНИЦЫ</h1>
+        <p class="subtitle">
+            Любой корабль начинается с корпуса, а любой сайт — с обязательного скелета HTML5.
+        </p>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Из каких частей состоит страница</h2>
+            <p>
+                В самом начале файла пишется <code>&lt;!DOCTYPE html&gt;</code>, чтобы браузер включил современный режим HTML5.
+                Дальше весь сайт делится на две главные части внутри тега <code>&lt;html&gt;</code>:
+            </p>
+            <p>
+                • <code>&lt;head&gt;</code> — служебный раздел («голова»). Здесь задаётся заголовок вкладки <code>&lt;title&gt;</code>,
+                кодировка <code>UTF-8</code> и подключается внешний файл стилей <code>css/style.css</code>.<br>
+                • <code>&lt;body&gt;</code> — видимая часть («тело»). Всё, что пользователь читает и нажимает на экране,
+                находится строго внутри <code>&lt;body&gt;</code>.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Семантические блоки внутри body</h2>
+            <p>
+                Чтобы код был аккуратным и понятным, страницу делят на логические зоны:
+                <code>&lt;header&gt;</code> (шапка сайта), <code>&lt;main&gt;</code> (основное содержимое) и
+                <code>&lt;footer&gt;</code> (подвал внизу страницы).
+            </p>
+            <a href="zoro.html" class="btn">Дальше: к чиби Зоро →</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Хроники HTML • Глава 2: Чиби Луффи • 2026</p>
+    </footer>
+
+</body>
+</html>
