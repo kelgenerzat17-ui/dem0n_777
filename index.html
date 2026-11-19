@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Хроники HTML: Путь Новичка</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="hero">
+        <p class="badge">АКАДЕМИЯ ВЕБ-РАЗРАБОТКИ</p>
+        <h1>HTML ДЛЯ НАЧИНАЮЩИХ</h1>
+        <p class="subtitle">
+            Построй скелет своего первого сайта и разбуди силу тегов. Выбери проводника, чтобы перейти к нужной главе!
+        </p>
+
+        <!-- 3 гиперссылки с персонажами (ведут к разделам страницы или внешним источникам) -->
+        <nav class="guides" aria-label="Проводники по обучению">
+            <a href="#basics" class="guide-link dipper">
+                <span class="avatar">📘</span>
+                <span class="guide-info">
+                    <strong>Диппер Пайнс</strong>
+                    <small>Дневник №3: Базовые теги</small>
+                </span>
+            </a>
+
+            <a href="#structure" class="guide-link luffy">
+                <span class="avatar">🏴‍☠️</span>
+                <span class="guide-info">
+                    <strong>Чиби Луффи</strong>
+                    <small>Курс на Гранд Лайн: Структура</small>
+                </span>
+            </a>
+
+            <a href="https://developer.mozilla.org/ru/docs/Web/HTML" target="_blank" rel="noopener noreferrer" class="guide-link zoro">
+                <span class="avatar">⚔️</span>
+                <span class="guide-info">
+                    <strong>Чиби Зоро</strong>
+                    <small>Путь меча: Справочник MDN ↗</small>
+                </span>
+            </a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="basics" class="card">
+            <h2>1. Базовые теги — артефакты из Дневника №3</h2>
+            <p>
+                HTML состоит из <strong>тегов</strong> — подсказок для браузера. Большинство тегов парные: открывающий
+                <code>&lt;p&gt;</code> и закрывающий <code>&lt;/p&gt;</code> со слешем.
+            </p>
+            <ul class="tag-list">
+                <li><code>&lt;h1&gt;...&lt;/h1&gt;</code> — главный заголовок эпичной страницы.</li>
+                <li><code>&lt;p&gt;...&lt;/p&gt;</code> — обычный абзац текста.</li>
+                <li><code>&lt;a href="..."&gt;...&lt;/a&gt;</code> — гиперссылка (как те карточки персонажей выше!).</li>
+            </ul>
+        </section>
+
+        <section id="structure" class="card">
+            <h2>2. Каркас страницы — твой корабль перед отплытием</h2>
+            <p>
+                Прежде чем покорять сеть, собери правильный каркас документа. Без него браузер не поймет,
+                где начало и конец страницы.
+            </p>
+            <div class="code-box">
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ru"&gt;
+&lt;head&gt;
+    &lt;title&gt;Мой сайт&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Привет, мир!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Сделано для защиты проекта по HTML &amp; CSS • 2026</p>
+    </footer>
+
+</body>
+</html>
